@@ -1,4 +1,202 @@
 .container {
-  width: 192rem;
+  width: 132rem;
   margin-inline: auto;
+}
+
+/* ───────────────────────────────────────────────
+   Navbar
+───────────────────────────────────────────────── */
+
+.navbar {
+  /* background: red; */
+  margin-top: 2rem;
+}
+
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 120.3rem; /* 1203px */
+  margin: 0 auto;
+  /* gap: 21.8rem; */
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  /* background-color: aqua; */
+}
+
+/* Brand / Logo */
+.navbar__brand {
+  width: 19.6rem;
+  height: 3.2rem;
+}
+
+.navbar__logo {
+  width: 19.6rem;
+  height: 3.2rem;
+}
+
+/* Menu */
+.navbar__menu {
+  /* width: 39.2rem; */
+  /* border: 2px solid blue; */
+  height: 2.1rem;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__menu-item {
+  /* optional: for future dropdowns etc */
+}
+
+.navbar__menu-link {
+  display: flex;
+  align-self: center;
+  color: #cad1e9;
+  text-decoration: none;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1;
+  transition: color 0.18s ease;
+}
+
+.navbar__menu-link:hover,
+.navbar__menu-link:focus {
+  color: #e0e7ff;
+}
+
+/* Actions / Button */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Premium Button (from previous request — slightly adjusted) */
+
+/* ───────────────────────────────────────────────
+   Hero Section
+───────────────────────────────────────────────── */
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  background: #0a0a15; /* dark base - adjust to your actual bg */
+  color: #cad1e9;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Optional subtle background gradient or noise if you want */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(9, 14, 219, 0.12) 0%,
+    rgba(141, 30, 162, 0.08) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* Content wrapper */
+.hero__content {
+  /* position: relative; */
+  max-width: 67.4rem;
+  height: 21.4rem;
+  z-index: 2;
+  /* border: 1px solid white; */
+}
+
+/* Pill "Services" badge */
+.service-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 14px 7px 15px;
+  /* margin-bottom: 2.5rem; */
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #cad1e9;
+  background: rgba(255, 255, 255, 0.04);
+  /* border: 1px solid rgba(255, 255, 255, 0.08); */
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  /* backdrop-filter: blur(8px); */
+  /* -webkit-backdrop-filter: blur(8px); */
+}
+
+.service-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px; /* true pill shape */
+  padding: 1px; /* this creates the border thickness */
+  background: linear-gradient(to right, #090edb 29%, #8d1ea2 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Inner subtle glow */
+.service-pill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 20px 2px rgba(200, 190, 255, 0.12),
+    inset 0 0 40px 4px rgba(140, 100, 240, 0.08);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Main headline */
+.hero__title {
+  font-size: 4rem;
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  /* margin: 0 0 1.5rem; */
+  /* letter-spacing: -0.02em; */
+  color: #cac6dd;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #090edb 29%, #8d1ea2 96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtitle / description */
+.hero__subtitle {
+  font-family: "Aeonik", sans-serif;
+  font-size: 400;
+  color: #cac6dd;
+  font-size: 2.4rem;
+  line-height: 1.4;
+  /* opacity: 0.92; */
+  /* margin: 0 0 3rem; */
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }

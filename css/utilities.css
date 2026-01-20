@@ -1,0 +1,78 @@
+/* ───────────────────────────────────────────────
+   Navbar
+───────────────────────────────────────────────── */
+
+.arrow-right {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+.gap-4 {
+  gap: 0.4rem;
+}
+.w-155 {
+  width: 15.5rem;
+}
+.premium-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 2rem;
+  font-family: "Aeonik", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #cad1e9;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Main gradient border + inner glow container */
+.premium-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px; /* true pill shape */
+  padding: 1px; /* this creates the border thickness */
+  background: linear-gradient(to right, #090edb 29%, #8d1ea2 100%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Inner subtle glow */
+.premium-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow:
+    inset 0 0 20px 2px rgba(200, 190, 255, 0.12),
+    inset 0 0 40px 4px rgba(140, 100, 240, 0.08);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Optional: hover state enhancement */
+.premium-btn:hover {
+  color: #e0e7ff;
+}
+
+.premium-btn:hover::after {
+  box-shadow:
+    inset 0 0 24px 4px rgba(200, 190, 255, 0.22),
+    inset 0 0 50px 8px rgba(140, 100, 240, 0.14);
+  transition: box-shadow 0.4s ease;
+}
+
+/* Optional: active / pressed state */
+.premium-btn:active {
+  transform: translateY(1px);
+  opacity: 0.92;
+}
