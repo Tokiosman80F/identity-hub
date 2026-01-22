@@ -6,6 +6,9 @@
 .border-1 {
   border: 1px solid white;
 }
+.margin-auto {
+  margin: 0 auto;
+}
 /* ───────────────────────────────────────────────
    Navbar
 ───────────────────────────────────────────────── */
@@ -564,7 +567,13 @@
 /* ───────────────────────────────────────────────
    Pricing Section
 ───────────────────────────────────────────────── */
-
+.price {
+  height: 88.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .pricing__container {
   display: flex;
   align-items: stretch;
