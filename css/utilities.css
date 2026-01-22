@@ -12,6 +12,9 @@
 .w-155 {
   width: 15.5rem;
 }
+.w-full {
+  width: 100%;
+}
 .premium-btn {
   position: relative;
   display: inline-flex;

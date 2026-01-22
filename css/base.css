@@ -1,5 +1,12 @@
 :root {
   --bg-color: #0e0c15;
+  --font-sora: "Sora", sans-serif;
+  --font-aeonik: "Aeonik", sans-serif;
+  --color-white: #ffffff;
+  --color-text-muted: #cac6dd;
+  --bg-gradient: linear-gradient(180deg, #e0e0e0 0%, #c2c2c2 100%);
+  --btn-gradient: linear-gradient(90deg, #090edb 0%, #e73dc4 100%);
+  --card-dark-btn: linear-gradient(180deg, #13112a 0%, #0c0a1a 100%);
 }
 
 * {
