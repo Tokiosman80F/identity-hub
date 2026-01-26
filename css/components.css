@@ -111,11 +111,12 @@
   justify-content: center;
   align-items: center;
   gap: 0.8rem;
+  text-align: center;
 }
 
 /* Pill "Services" badge */
 .service-pill {
-  max-width: 8.4rem;
+  /* max-width: 8.4rem; */
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -170,7 +171,6 @@
   line-height: 1.2;
   text-align: center;
   max-width: 43rem;
-  height: 9.6rem;
   color: #cad1e9;
 }
 
@@ -299,10 +299,10 @@
   transform: translateY(-50%);
 }
 .btn-left {
-  left: -1rem;
+  left: 1rem;
 }
 .btn-right {
-  right: -2rem;
+  right: 1rem;
 }
 .nav-btn {
   position: relative;
@@ -782,7 +782,7 @@
 .feature__card-content {
   display: flex;
   justify-content: space-between;
-  gap: clamp(3rem, 6vw, 14rem);
+  /* gap: clamp(3rem, 6vw, 14rem); */
 }
 
 .feature__content-progressbar {
@@ -836,10 +836,17 @@
   top: 0;
   width: 2.8rem;
   height: 2.8rem;
-
-  background: url("../assets/icons/feature-check-blue-icon.svg");
 }
 
+.feature-card__list-item--blue::before {
+  background-image: url("../assets/icons/feature-check-blue-icon.svg");
+}
+.feature-card__list-item--purple::before {
+  background-image: url("../assets/icons/feature-check-purple-icon.svg");
+}
+.feature-card__list-item--green::before {
+  background-image: url("../assets/icons/feature-check-green-icon.svg");
+}
 .feature__card-visual {
   flex: 1;
   display: flex;
@@ -862,4 +869,128 @@
     );
     border-image-slice: 1;
   }
+}
+
+/* card 2 - visual part  */
+.feature__card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.contact-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.5rem 1.6rem;
+  background: linear-gradient(
+    137.34deg,
+    rgba(27, 28, 54, 0.16) 23.98%,
+    rgba(112, 113, 122, 0.16) 65.73%
+  );
+  backdrop-filter: blur(11.7px);
+  -webkit-backdrop-filter: blur(11.7px);
+
+  border: none;
+  border-radius: 2rem;
+}
+
+.contact-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    278.56deg,
+    rgba(255, 255, 255, 0.07) 0.8%,
+    rgba(255, 255, 255, 0.15) 97.41%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.contact-item__icon {
+  width: 5.2rem;
+  height: 5.2rem;
+}
+.contact-item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: "Inter", sans-serif;
+  color: #cad1e9;
+  padding: 1.5rem 1.6rem;
+}
+.contact-item__label {
+  font-size: 1.4rem;
+  line-height: 1;
+  font-weight: 400;
+}
+.contact-item__value {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+/*
+  ───────────────────────────────────────────────
+  Feature
+  Section
+  ─────────────────────────────────────────────────
+  */
+.hero {
+  /* /* width: 100%; */
+  min-height: 100vh;
+  background: url("../assets/images/grind-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /* z-index: 30; 
+  position: relative; */
+}
+.hero__overlay {
+  /* min-height: 100vh; */
+  /* width: 100%; */
+  margin-top: 6.4rem;
+}
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  max-width: 99.2rem;
+}
+
+.hero-cta {
+}
+.hero__content-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero__title {
+  font-family: var(--font-sora);
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 1.2;
+  background: linear-gradient(180deg, #f33cc0 13.43%, #4349ff 73.37%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.hero__content-image {
 }
