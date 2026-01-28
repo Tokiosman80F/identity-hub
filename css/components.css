@@ -13,11 +13,14 @@
 /* ───────────────────────────────────────────────
    Navbar
 ───────────────────────────────────────────────── */
-
+header {
+  position: relative;
+  z-index: 100;
+}
 .navbar {
   --logo-width: 19.6rem;
   --logo-height: 3.2rem;
-  margin: 2rem;
+  margin: 2rem 0;
 }
 
 .navbar__container {
@@ -26,6 +29,7 @@
   justify-content: space-between;
   max-width: 120.3rem;
   margin: 0 auto;
+  background-color: rgba(15, 12, 23, 0.14);
 
   padding: 1.2rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -36,6 +40,7 @@
 .navbar__logo {
   width: var(--logo-width);
   height: var(--logo-height);
+  cursor: pointer;
 }
 
 .navbar__menu {
@@ -58,6 +63,7 @@
   font-size: 1.6rem;
   line-height: 1;
   transition: color 0.18s ease;
+  cursor: pointer;
 }
 
 .navbar__menu-link:hover,
@@ -76,13 +82,51 @@
   ─────────────────────────────────────────────────
   */
 .hero {
-  --hero-gradient: linear-gradient(180deg, #f33cc0 13.43%, #4349ff 73.37%);
+  --hero-gradient: linear-gradient(
+    180deg,
+    rgb(243, 60, 192) 13.43%,
+    rgb(67, 73, 255) 73.37%
+  );
   min-height: 100vh;
-  background: url("../assets/images/grind-2.png") no-repeat center / contain;
+  /* background: url("../assets/images/grind-2.png") no-repeat center / contain; */
+  /* z-index: 99999; */
 }
+
 .hero__overlay {
-  margin-top: 6.4rem;
+  padding-top: 6.4rem;
+  padding-bottom: 10rem;
 }
+.space-container {
+  z-index: -1000;
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* The core gradient: soft purple to deep blue */
+  background: radial-gradient(
+    circle at center,
+    rgba(220, 68, 146, 0.302) 0%,
+    rgba(20, 40, 150, 0.2) 50%,
+    transparent 70%
+  );
+}
+
+.orbit {
+  z-index: -1000;
+  position: absolute;
+  border: 1px solid rgba(202, 198, 221, 0.1); /* Very faint lines */
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+
+  top: 57%; /* Adjust this percentage to move them higher or lower */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
 .hero__content {
   display: flex;
   flex-direction: column;
@@ -90,6 +134,7 @@
   gap: 5rem;
   max-width: 99.2rem;
   width: 100%;
+  z-index: 100;
 }
 
 .hero-cta {
@@ -199,7 +244,7 @@
   align-items: center;
   justify-content: center;
   padding: 8rem 2.4rem;
-  background: #0a0a15 url("../assets/images/grind-2.png");
+  background: transparent;
   color: #cad1e9;
   text-align: center;
   overflow: hidden;
@@ -575,9 +620,9 @@
 /* ───────────────────────────────────────────────
    Pricing Section
 ───────────────────────────────────────────────── */
-.price {
+.pricing {
   width: 100%;
-  height: 88.2rem;
+  /* height: 88.2rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -871,6 +916,7 @@
   flex-direction: column;
   align-items: center;
   gap: 3.2rem;
+  padding: 2.4rem;
 }
 
 .author {
@@ -973,25 +1019,27 @@
 
 .cta {
   width: 100%;
-  min-height: 63rem;
+  padding: 14.9rem;
+  /* min-height: 63rem; */
 }
 .cta-container {
-  background: url("../assets/images/grind-2.png") center/cover no-repeat;
+  /* background: url("../assets/images/grind-2.png") center/cover no-repeat; */
   height: 100%;
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
 }
 .cta-content {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 69.1rem;
-  height: 30.4rem;
+  width: 100%;
+  max-width: 69.1rem;
+  /* height: 30.4rem; */
 }
 
 .cta-content__heading {
@@ -1145,3 +1193,9 @@
   height: 4rem;
   object-fit: contain;
 }
+
+/* swiper js  */
+
+/* Ensure your custom buttons are visible over the swiper */
+
+/* Hide Swiper's default icons if you only want your SVGs */

@@ -11,9 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
+    <!-- navbar section -->
     <header>
       <nav class="navbar">
         <div class="container">
@@ -58,7 +63,12 @@
     <!-- hero section -->
     <section class="hero">
       <div class="container">
-        <div class="hero__overlay">
+        <div class="hero__overlay space-container">
+          <div class="orbit" style="--size: 370px"></div>
+          <div class="orbit" style="--size: 578px"></div>
+          <div class="orbit" style="--size: 822px"></div>
+          <div class="orbit" style="--size: 1054px"></div>
+          <div class="orbit" style="--size: 1248px"></div>
           <div class="hero__content margin-auto">
             <div class="hero__content-texts">
               <div class="service-pill">Secure your data</div>
@@ -151,6 +161,7 @@
       </div>
     </section>
 
+    <!-- service section -->
     <section class="service">
       <div class="content">
         <div class="service-pill">Services</div>
@@ -253,7 +264,6 @@
     </section>
 
     <!--Features:  why choose us -->
-    <!-- Features: why choose us -->
     <section class="features">
       <div class="container">
         <!-- Section heading -->
@@ -271,245 +281,253 @@
         </div>
 
         <!-- Feature cards wrapper -->
-        <div class="feature__cards">
-          <!-- Card 1 -->
-          <div class="feature__card">
-            <div class="feature__card-content">
-              <div class="feature__content-progressbar">
-                <img
-                  src="./assets/images/feature-card-progress-blue.svg"
-                  alt="progress bar"
-                />
+        <div class="space-container">
+          <div class="orbit" style="--size: 370px"></div>
+          <div class="orbit" style="--size: 578px"></div>
+          <div class="orbit" style="--size: 822px"></div>
+          <div class="orbit" style="--size: 1054px"></div>
+          <div class="orbit" style="--size: 1248px"></div>
 
-                <div class="feature__content-texts">
-                  <h1 class="feature__content-heading">
-                    Protect Personal information
-                  </h1>
+          <div class="feature__cards">
+            <!-- Card 1 -->
+            <div class="feature__card">
+              <div class="feature__card-content">
+                <div class="feature__content-progressbar">
+                  <img
+                    src="./assets/images/feature-card-progress-blue.svg"
+                    alt="progress bar"
+                  />
 
-                  <ul class="feature__content-description">
-                    <li
-                      class="feature-card__list-item feature-card__list-item--blue"
-                    >
-                      The first step involves identifying all places where your
-                      personal information might be present.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--blue"
-                    >
-                      Once you've identified where your information is held, the
-                      next step is to contact the administrators of this
-                      platform.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--blue"
-                    >
-                      Removing personal information is not a one-time task but
-                      requires ongoing vigilance.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--blue"
-                    >
-                      Removing personal information is not a one-time task but
-                      requires ongoing vigilance.
-                    </li>
-                  </ul>
+                  <div class="feature__content-texts">
+                    <h1 class="feature__content-heading">
+                      Protect Personal information
+                    </h1>
+
+                    <ul class="feature__content-description">
+                      <li
+                        class="feature-card__list-item feature-card__list-item--blue"
+                      >
+                        The first step involves identifying all places where
+                        your personal information might be present.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--blue"
+                      >
+                        Once you've identified where your information is held,
+                        the next step is to contact the administrators of this
+                        platform.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--blue"
+                      >
+                        Removing personal information is not a one-time task but
+                        requires ongoing vigilance.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--blue"
+                      >
+                        Removing personal information is not a one-time task but
+                        requires ongoing vigilance.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="feature__card-visual">
-                <img
-                  src="./assets/images/feature-card-visual.svg"
-                  alt="protect personal infographic"
-                  class="feature-card__visual-image"
-                />
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="feature__card">
-            <div class="feature__card-content">
-              <div class="feature__content-progressbar">
-                <img
-                  src="./assets/images/feature-card-progress-purple.svg"
-                  alt="progress bar"
-                />
-
-                <div class="feature__content-texts">
-                  <h1 class="feature__content-heading">
-                    Protect Personal information
-                  </h1>
-
-                  <ul class="feature__content-description">
-                    <li
-                      class="feature-card__list-item feature-card__list-item--purple"
-                    >
-                      The first step involves identifying all places where your
-                      personal information might be present.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--purple"
-                    >
-                      Once you've identified where your information is held, the
-                      next step is to contact the administrators of this
-                      platform.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--purple"
-                    >
-                      Removing personal information is not a one-time task but
-                      requires ongoing vigilance.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--purple"
-                    >
-                      Removing personal information is not a one-time task but
-                      requires ongoing vigilance.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="feature__card-visual">
-                <div class="feature__card-grid">
-                  <div class="contact-item contact-item--regular">
-                    <img
-                      class="contact-item__icon"
-                      src="./assets/icons/card-2-visual-contact-icon.svg"
-                      alt=""
-                    />
-                    <div class="contact-item__content">
-                      <p class="contact-item__label">Username</p>
-                      <p class="contact-item__value">+1 (456) 453-3456</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item contact-item--regular">
-                    <img
-                      class="contact-item__icon"
-                      src="./assets/icons/card-2-visual-call-icon.svg"
-                      alt=""
-                    />
-                    <div class="contact-item__content">
-                      <p class="contact-item__label">Phone numbers</p>
-                      <p class="contact-item__value">+1 (456) 453-3456</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item contact-item--regular">
-                    <img
-                      class="contact-item__icon"
-                      src="./assets/icons/card-2-visual-email-icon.svg"
-                      alt=""
-                    />
-                    <div class="contact-item__content">
-                      <p class="contact-item__label">Email address</p>
-                      <p class="contact-item__value">example@email.com</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item contact-item--regular">
-                    <img
-                      class="contact-item__icon"
-                      src="./assets/icons/card-2-visual-creditcard-icon.svg"
-                      alt=""
-                    />
-                    <div class="contact-item__content">
-                      <p class="contact-item__label">Credit card</p>
-                      <p class="contact-item__value">**** **** **** 3456</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item contact-item--regular">
-                    <img
-                      class="contact-item__icon"
-                      src="./assets/icons/card-2-visual-password-icon.svg"
-                      alt=""
-                    />
-                    <div class="contact-item__content">
-                      <p class="contact-item__label">Password</p>
-                      <p class="contact-item__value">Kas3345-r32</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item contact-item--regular">
-                    <img
-                      class="contact-item__icon"
-                      src="./assets/icons/card-2-visual-otp-icon.svg"
-                      alt=""
-                    />
-                    <div class="contact-item__content">
-                      <p class="contact-item__label">One-time passcode</p>
-                      <p class="contact-item__value">Kas3345-r32</p>
-                    </div>
-                  </div>
+                <div class="feature__card-visual">
+                  <img
+                    src="./assets/images/feature-card-visual.svg"
+                    alt="protect personal infographic"
+                    class="feature-card__visual-image"
+                  />
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Card 3 -->
-          <div class="feature__card">
-            <div class="feature__card-content">
-              <div class="feature__content-progressbar">
-                <img
-                  src="./assets/images/feature-card-progress-green.svg"
-                  alt="progress bar"
-                />
+            <!-- Card 2 -->
+            <div class="feature__card">
+              <div class="feature__card-content">
+                <div class="feature__content-progressbar">
+                  <img
+                    src="./assets/images/feature-card-progress-purple.svg"
+                    alt="progress bar"
+                  />
 
-                <div class="feature__content-texts">
-                  <h1 class="feature__content-heading">
-                    Protect Personal information
-                  </h1>
+                  <div class="feature__content-texts">
+                    <h1 class="feature__content-heading">
+                      Protect Personal information
+                    </h1>
 
-                  <ul class="feature__content-description">
-                    <li
-                      class="feature-card__list-item feature-card__list-item--green"
-                    >
-                      The first step involves identifying all places where your
-                      personal information might be present.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--green"
-                    >
-                      Once you've identified where your information is held, the
-                      next step is to contact the administrators of this
-                      platform.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--green"
-                    >
-                      Removing personal information is not a one-time task but
-                      requires ongoing vigilance.
-                    </li>
-                    <li
-                      class="feature-card__list-item feature-card__list-item--green"
-                    >
-                      Removing personal information is not a one-time task but
-                      requires ongoing vigilance.
-                    </li>
-                  </ul>
+                    <ul class="feature__content-description">
+                      <li
+                        class="feature-card__list-item feature-card__list-item--purple"
+                      >
+                        The first step involves identifying all places where
+                        your personal information might be present.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--purple"
+                      >
+                        Once you've identified where your information is held,
+                        the next step is to contact the administrators of this
+                        platform.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--purple"
+                      >
+                        Removing personal information is not a one-time task but
+                        requires ongoing vigilance.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--purple"
+                      >
+                        Removing personal information is not a one-time task but
+                        requires ongoing vigilance.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="feature__card-visual">
+                  <div class="feature__card-grid">
+                    <div class="contact-item contact-item--regular">
+                      <img
+                        class="contact-item__icon"
+                        src="./assets/icons/card-2-visual-contact-icon.svg"
+                        alt=""
+                      />
+                      <div class="contact-item__content">
+                        <p class="contact-item__label">Username</p>
+                        <p class="contact-item__value">+1 (456) 453-3456</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item contact-item--regular">
+                      <img
+                        class="contact-item__icon"
+                        src="./assets/icons/card-2-visual-call-icon.svg"
+                        alt=""
+                      />
+                      <div class="contact-item__content">
+                        <p class="contact-item__label">Phone numbers</p>
+                        <p class="contact-item__value">+1 (456) 453-3456</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item contact-item--regular">
+                      <img
+                        class="contact-item__icon"
+                        src="./assets/icons/card-2-visual-email-icon.svg"
+                        alt=""
+                      />
+                      <div class="contact-item__content">
+                        <p class="contact-item__label">Email address</p>
+                        <p class="contact-item__value">example@email.com</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item contact-item--regular">
+                      <img
+                        class="contact-item__icon"
+                        src="./assets/icons/card-2-visual-creditcard-icon.svg"
+                        alt=""
+                      />
+                      <div class="contact-item__content">
+                        <p class="contact-item__label">Credit card</p>
+                        <p class="contact-item__value">**** **** **** 3456</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item contact-item--regular">
+                      <img
+                        class="contact-item__icon"
+                        src="./assets/icons/card-2-visual-password-icon.svg"
+                        alt=""
+                      />
+                      <div class="contact-item__content">
+                        <p class="contact-item__label">Password</p>
+                        <p class="contact-item__value">Kas3345-r32</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item contact-item--regular">
+                      <img
+                        class="contact-item__icon"
+                        src="./assets/icons/card-2-visual-otp-icon.svg"
+                        alt=""
+                      />
+                      <div class="contact-item__content">
+                        <p class="contact-item__label">One-time passcode</p>
+                        <p class="contact-item__value">Kas3345-r32</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="feature__card-visual">
-                <img
-                  src="./assets/images/feature-card-security.svg"
-                  alt="protect personal infographic"
-                  class="feature-card__visual-image"
-                />
+            <!-- Card 3 -->
+            <div class="feature__card">
+              <div class="feature__card-content">
+                <div class="feature__content-progressbar">
+                  <img
+                    src="./assets/images/feature-card-progress-green.svg"
+                    alt="progress bar"
+                  />
+
+                  <div class="feature__content-texts">
+                    <h1 class="feature__content-heading">
+                      Protect Personal information
+                    </h1>
+
+                    <ul class="feature__content-description">
+                      <li
+                        class="feature-card__list-item feature-card__list-item--green"
+                      >
+                        The first step involves identifying all places where
+                        your personal information might be present.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--green"
+                      >
+                        Once you've identified where your information is held,
+                        the next step is to contact the administrators of this
+                        platform.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--green"
+                      >
+                        Removing personal information is not a one-time task but
+                        requires ongoing vigilance.
+                      </li>
+                      <li
+                        class="feature-card__list-item feature-card__list-item--green"
+                      >
+                        Removing personal information is not a one-time task but
+                        requires ongoing vigilance.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="feature__card-visual">
+                  <img
+                    src="./assets/images/feature-card-security.svg"
+                    alt="protect personal infographic"
+                    class="feature-card__visual-image"
+                  />
+                </div>
               </div>
             </div>
           </div>
+          <!-- /.feature__cards -->
         </div>
-        <!-- /.feature__cards -->
       </div>
     </section>
 
     <!-- pricing -->
     <section class="pricing">
-      <div class="container">
-        <div class="testimonials-content margin-auto">
+      <div class="container margin-auto">
+        <div class="testimonials-content">
           <div class="service-pill">Price</div>
 
           <h1 class="service__title">
@@ -639,23 +657,32 @@
     </section>
 
     <section class="cta">
-      <div class="container cta-container">
-        <div class="cta-content">
-          <div class="cta-content__accent-wrapper">
-            <h1 class="cta-content__heading">
-              Be part of the future of IdentityHub
-            </h1>
-            <div class="cta-content__stroke">
-              <img src="./assets/images/cta-stoke.svg" alt="" srcset="" />
+      <div class="space-container">
+        <div class="orbit" style="--size: 220px"></div>
+        <div class="orbit" style="--size: 344px"></div>
+        <div class="orbit" style="--size: 490px"></div>
+        <div class="orbit" style="--size: 628px"></div>
+        <div class="orbit" style="--size: 744px"></div>
+        <div class="container">
+          <div class="cta-container">
+            <div class="cta-content">
+              <div class="cta-content__accent-wrapper">
+                <h1 class="cta-content__heading">
+                  Be part of the future of IdentityHub
+                </h1>
+                <div class="cta-content__stroke">
+                  <img src="./assets/images/cta-stoke.svg" alt="" srcset="" />
+                </div>
+              </div>
+
+              <p class="cta-content__subheading">
+                Unleash the power of AI within Brainwave. Upgrade your
+                productivity with Brainwave, the open AI chat app.
+              </p>
+
+              <a href="#" class="cta-content__button"> Start free trail </a>
             </div>
           </div>
-
-          <p class="cta-content__subheading">
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
-          </p>
-
-          <a href="#" class="cta-content__button"> Start free trail </a>
         </div>
       </div>
     </section>
