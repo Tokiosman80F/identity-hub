@@ -61,3 +61,9 @@ body {
   background-color: var(--bg-color);
   color: #fff;
 }
+
+@media (max-width: 425px) {
+  html {
+    font-size: 50%;
+  }
+}

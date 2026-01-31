@@ -15,19 +15,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="./script.js" defer></script>
   </head>
 
   <body>
     <!-- navbar section -->
-    <!-- <header>
+    <header>
       <nav class="navbar">
         <div class="container">
           <div class="navbar__container">
+            <!-- brand -->
             <div class="navbar__brand">
               <img src="./assets/images/logo.svg" alt="" class="navbar__logo" />
             </div>
 
-            <ul class="navbar__menu">
+            <!-- Menu -->
+            <ul class="navbar__menu border-1" id="navbarMenu">
               <li class="navbar__menu-item">
                 <a href="#" class="navbar__menu-link">Services</a>
               </li>
@@ -43,26 +46,39 @@
               <li class="navbar__menu-item">
                 <a href="#" class="navbar__menu-link">About us</a>
               </li>
+              <div class="navbar__actions">
+                <button class="premium-btn gap-4 w-155">
+                  Start free trial
+                  <img
+                    class="arrow-right"
+                    src="./assets/icons/arrow-right-icon.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
             </ul>
 
-            <div class="navbar__actions">
-              <button class="premium-btn gap-4 w-155">
-                Start free trial
-                <img
-                  class="arrow-right"
-                  src="./assets/icons/arrow-right-icon.svg"
-                  alt=""
-                />
-              </button>
-            </div>
+            <!-- hamburger -->
+            <button
+              class="navbar__toggle"
+              id="navbarToggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="navbarMenu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <!-- nav action btn -->
           </div>
         </div>
       </nav>
-    </header> -->
+    </header>
 
     <!-- hero section -->
-    <section class="hero">
-      <div class="container">
+    <!-- <section class="hero">
+      <div class="container border-1">
         <div class="hero__overlay space-container">
           <div class="orbit orbit--1"></div>
           <div class="orbit orbit--2"></div>
@@ -90,13 +106,13 @@
               </div>
             </div>
 
-            <!-- hero image -->
+            comment: hero image
             <div class="hero__img">
               <div class="hero__img-center">
                 <img src="./assets/images/hero-image.svg" alt="" />
               </div>
 
-              <!-- otp -->
+             comment: otp
               <div class="card-otp">
                 <div class="contact-item contact-item--small">
                   <img
@@ -111,7 +127,7 @@
                 </div>
               </div>
 
-              <!-- call -->
+              comment: call
               <div class="card-phone">
                 <div class="contact-item contact-item--small">
                   <img
@@ -126,7 +142,7 @@
                 </div>
               </div>
 
-              <!-- credit card -->
+              comment:credit card
               <div class="card-creditcard">
                 <div class="contact-item contact-item--small">
                   <img
@@ -141,7 +157,7 @@
                 </div>
               </div>
 
-              <!-- email -->
+              comment:email
               <div class="card-email">
                 <div class="contact-item contact-item--small">
                   <img
@@ -159,7 +175,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- service section -->
     <!-- <section class="service">

@@ -1,17 +1,7 @@
-// const swiper = new Swiper(".swiper", {
-//   slidesPerView: 1,
-//   loop: true,
-//   speed: 600,
+const toggle = document.getElementById("navbarToggle");
+const menu = document.getElementById("navbarMenu");
 
-//   navigation: {
-//     nextEl: ".btn-right .nav-btn",
-//     prevEl: ".btn-left .nav-btn",
-//   },
-
-//   pagination: {
-//     el: ".dots",
-//     clickable: true,
-//     bulletClass: "dot",
-//     bulletActiveClass: "active",
-//   },
-// });
+toggle.addEventListener("click", () => {
+  const isOpen = menu.classList.toggle("is-open");
+  toggle.setAttribute("aria-expanded", isOpen);
+});
