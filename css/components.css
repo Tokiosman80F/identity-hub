@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 132rem;
   margin-inline: auto;
+  /* border: 1px solid; */
 }
 
 .border-1 {
@@ -71,14 +72,21 @@
   .orbit {
     border-color: rgba(202, 198, 221, 0.07);
   }
-}
-
-@media (max-width: 480px) {
-  .orbit--4,
   .orbit--5 {
     display: none;
   }
 }
+@media (max-width: 620px) {
+  .orbit--4 {
+    display: none;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .orbit--4 {
+    display: none;
+  }
+} */
 
 /* task: ✅ */
 /* service pill */
@@ -124,12 +132,13 @@
 }
 
 .service__title {
-  font-size: 4rem;
+  font-size: 4.8rem;
   font-family: var(--font-sora);
   font-weight: 600;
   line-height: 1.2;
   text-align: center;
-  max-width: 43rem;
+  width: 100%;
+  /* max-width: 43rem; */
   color: #cad1e9;
 }
 
@@ -223,7 +232,7 @@ header {
   align-items: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
   .navbar__toggle {
     display: flex;
   }
@@ -279,11 +288,12 @@ header {
     rgb(243, 60, 192) 13.43%,
     rgb(67, 73, 255) 73.37%
   );
-  --orbit-1: clamp(220px, 28vw, 370px);
-  --orbit-2: clamp(340px, 42vw, 578px);
-  --orbit-3: clamp(480px, 60vw, 822px);
-  --orbit-4: clamp(620px, 76vw, 1054px);
-  --orbit-5: clamp(740px, 90vw, 1248px);
+  --orbit-1: clamp(22rem, 28vw, 37rem);
+  --orbit-2: clamp(34rem, 42vw, 57.8rem);
+  --orbit-3: clamp(48rem, 60vw, 82.2rem);
+  --orbit-4: clamp(62rem, 76vw, 105.4rem);
+  --orbit-5: clamp(74rem, 90vw, 124.8rem);
+
   min-height: 100vh;
   background: url("../assets/images/grind-2.png") no-repeat center / cover;
 }
@@ -304,9 +314,10 @@ header {
 }
 
 .hero-cta {
-  margin-top: 3.2rem;
+  padding-top: 3.2rem;
   display: flex;
   gap: 1.6rem;
+  /* width: 100%; */
 }
 .hero__content-texts {
   width: 100%;
@@ -330,7 +341,7 @@ header {
   padding-bottom: 2.4rem;
   font-family: var(--font-sora);
   font-weight: 600;
-  font-size: 6rem;
+  font-size: clamp(3.2rem, 8vw, 6rem);
   line-height: 1.2;
 }
 /* task: ✅ */
@@ -354,7 +365,7 @@ header {
 .hero__subtitle {
   font-family: var(--font-aeonik);
   color: #cac6dd;
-  font-size: 2.4rem;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
   line-height: 1.4;
   opacity: 0.92;
   max-width: 80.7rem;
@@ -406,6 +417,96 @@ header {
   right: 8%;
 }
 
+@media (max-width: 860px) {
+  .hero__content {
+    gap: 3rem; /* Reduce space between text and image */
+  }
+
+  /* Scale down the floating cards */
+  .contact-item--small {
+    padding: 0.8rem;
+    scale: 0.85;
+    transform-origin: center;
+  }
+
+  /* Move cards slightly inward so they don't clip the screen edges */
+  .card-otp {
+    left: 2%;
+  }
+  .card-phone {
+    right: 2%;
+  }
+  .card-creditcard {
+    left: 2%;
+  }
+  .card-email {
+    right: 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    overflow-x: hidden;
+  }
+  .hero__overlay {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero-cta {
+    padding-top: 1.2rem;
+    flex-direction: column;
+    /* width: 100%; */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .premium-btn,
+  .cta-content__button {
+  }
+
+  /* Hide the Orbits on mobile to save performance and space */
+  .orbit {
+    /* display: none; */
+  }
+
+  /* Optional: If cards are too messy, hide them or stack them below the image */
+  .hero__img {
+    margin-top: 1rem;
+  }
+
+  .hero__img-center img {
+    max-width: 80%; /* Shrink center image */
+  }
+
+  /* Adjust cards for very small screens */
+  .card-otp,
+  .card-phone,
+  .card-creditcard,
+  .card-email {
+    position: absolute;
+    scale: 0.7;
+  }
+
+  /* Prevent cards from overlapping in the middle */
+  /* .card-otp {
+    top: -10%;
+    left: -5%;
+  }
+  .card-phone {
+    top: -10%;
+    right: -5%;
+  }
+  .card-creditcard {
+    bottom: -5%;
+    left: -5%;
+  }
+  .card-email {
+    bottom: -5%;
+    right: -5%;
+  } */
+}
+
 /* ───────────────────────────────────────────────
    Service Section
 ───────────────────────────────────────────────── */
@@ -455,7 +556,7 @@ header {
   font-family: var(--font-aeonik);
   /* font-size: 400; */
   color: #cac6dd;
-  font-size: 2.4rem;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
   line-height: 1.4;
   padding-top: 0.8rem;
   opacity: 0.92;
@@ -564,6 +665,37 @@ header {
 .service-card__link:hover {
   opacity: 0.8;
 }
+/* --- Global Responsive Adjustments --- */
+
+.service__subtitle {
+  /* Remove fixed heights/widths to allow text to flow */
+  width: 100%;
+  max-width: 67.4rem;
+  height: auto;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 2rem;
+}
+
+/* --- Breakpoint: 860px (Tablets) --- */
+@media (max-width: 860px) {
+  .service {
+    padding: 6rem 2rem;
+  }
+
+  .service__cards {
+    flex-wrap: wrap; /* Allows cards to drop to next line */
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .service-card {
+    /* Two cards per row at 860px */
+    max-width: calc(50% - 2rem);
+    padding: 2.4rem;
+  }
+}
+
+/* --- Breakpoint: 480px (Mobile) --- */
 
 /* ───────────────────────────────────────────────
    Feature Section    
@@ -606,6 +738,7 @@ header {
 .feature__content-progressbar {
   display: flex;
   gap: 2rem;
+  width: 100%;
   max-width: 61.7rem;
 }
 
@@ -625,7 +758,7 @@ header {
 
 .feature__content-heading {
   font-family: var(--font-aeonik);
-  font-size: 3.2rem;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
   line-height: 1.2;
   font-weight: 500;
   color: #cad1e9;
@@ -671,7 +804,7 @@ header {
   background-image: url("../assets/icons/feature-check-green-icon.svg");
 }
 .feature__card-visual {
-  flex: 1;
+  flex: 0 0 1;
   display: flex;
   justify-content: flex-end;
 }
@@ -697,10 +830,12 @@ header {
 /* card 2 - visual part  */
 .feature__card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 24.2rem);
+  align-content: start;
   gap: 1.6rem 2rem;
 }
 .contact-item {
+  align-self: center;
   position: relative;
   display: flex;
   align-items: center;
@@ -769,12 +904,101 @@ header {
   line-height: 1.25;
   letter-spacing: -0.5px;
 }
+
+@media (max-width: 860px) {
+  .feature__content-heading {
+    font-size: 2.4rem;
+  }
+
+  .feature-card__list-item {
+    font-size: 1.6rem;
+  }
+  .feature-card__list-item::before {
+    width: 2rem;
+    height: 2rem;
+  }
+  feature__content-progressbar img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .feature__card-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+@media (max-width: 460px) {
+  .features {
+    overflow-x: hidden;
+  }
+}
+
+/* card -2  */
+@media (max-width: 1100px) {
+  .feature__card-grid {
+    align-content: center;
+    /* grid-template-columns: repeat(2, 20.2rem); */
+  }
+}
+
+@media (max-width: 1100px) {
+  .feature__card-grid {
+    align-content: center;
+    /* grid-template-columns: repeat(2, 20.2rem); */
+  }
+}
+
+@media (max-width: 1024px) {
+  .feature__card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: start;
+    gap: 1.6rem 2rem;
+  }
+  .contact-item--regular {
+    padding: 1rem;
+  }
+
+  .contact-item__icon {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+
+  .contact-item__label {
+    font-size: 1.2rem;
+  }
+  .contact-item__value {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .feature__card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .contact-item {
+    align-self: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    background: linear-gradient(
+      137.34deg,
+      rgba(27, 28, 54, 0.16) 23.98%,
+      rgba(112, 113, 122, 0.16) 65.73%
+    );
+    backdrop-filter: blur(11.7px);
+    -webkit-backdrop-filter: blur(11.7px);
+
+    border-radius: 2rem;
+  } */
+}
 /* ───────────────────────────────────────────────
    Pricing Section
 ───────────────────────────────────────────────── */
 .pricing {
   width: 100%;
-  /* height: 88.2rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -790,8 +1014,10 @@ header {
 
 /* Card Styles */
 .pricing-card {
-  width: 38rem;
-  padding: 4rem;
+  width: 100%;
+  max-width: 38rem;
+  padding: clamp(2rem, 4vw, 4rem);
+  height: auto;
 
   display: flex;
   flex-direction: column;
@@ -835,7 +1061,7 @@ header {
   align-items: center;
   margin-bottom: 2rem;
 
-  font-size: 8.8rem;
+  font-size: clamp(5rem, 8vw, 8.8rem);
   font-weight: 600;
   line-height: 1;
   color: var(--color-white);
@@ -909,6 +1135,13 @@ header {
   background: url("../assets/icons/price-check.svg");
 }
 
+@media (max-width: 1100px) {
+}
+@media (max-width: 800px) {
+}
+@media (max-width: 480px) {
+}
+
 /* ───────────────────────────────────────────────
    Testimonials Section
 ───────────────────────────────────────────────── */
@@ -926,7 +1159,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 43rem;
+  /* max-width: 43rem; */
   gap: 0.8rem;
   margin: 0 auto;
 }
@@ -1290,6 +1523,7 @@ header {
 
 /* Button Component */
 .cta-content__button {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

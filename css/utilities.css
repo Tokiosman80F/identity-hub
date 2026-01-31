@@ -10,7 +10,7 @@
   gap: 0.4rem;
 }
 .w-155 {
-  width: 15.5rem;
+  max-width: 15.5rem;
 }
 .w-full {
   width: 100%;
