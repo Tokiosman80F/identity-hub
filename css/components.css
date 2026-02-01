@@ -132,7 +132,7 @@
 }
 
 .service__title {
-  font-size: 4.8rem;
+  font-size: clamp(3.2rem, 5vw + 1rem, 4.8rem);
   font-family: var(--font-sora);
   font-weight: 600;
   line-height: 1.2;
@@ -233,6 +233,9 @@ header {
 }
 
 @media (max-width: 860px) {
+  .navbar {
+    padding: 0 2rem;
+  }
   .navbar__toggle {
     display: flex;
   }
@@ -301,6 +304,35 @@ header {
 .hero__overlay {
   padding-top: 6.4rem;
   padding-bottom: 10rem;
+  position: relative;
+}
+.planet--green,
+.planet--sky,
+.planet--organ-small,
+.planet--organ-big,
+.planet--green-2 {
+  position: absolute;
+}
+
+.planet--green {
+  top: 50%;
+  left: 0;
+}
+.planet--sky {
+  top: 40%;
+  left: 20%;
+}
+.planet--organ-small {
+  top: 0;
+  right: 0;
+}
+.planet--organ-big {
+  top: 10%;
+  left: -10%;
+}
+.planet--green-2 {
+  top: 35%;
+  right: 0;
 }
 
 .hero__content {
@@ -357,7 +389,7 @@ header {
   bottom: -10px;
   width: 100%;
   height: 20px;
-  background: url("../assets/images/hero-heading.svg") no-repeat contain;
+  background: url("../assets/images/hero-heading.svg") no-repeat center/ contain;
   pointer-events: none;
   -webkit-text-fill-color: initial;
 }
@@ -418,6 +450,9 @@ header {
 }
 
 @media (max-width: 860px) {
+  .hero {
+    padding: 0 2rem;
+  }
   .hero__content {
     gap: 3rem; /* Reduce space between text and image */
   }
@@ -690,13 +725,33 @@ header {
 
   .service-card {
     /* Two cards per row at 860px */
-    max-width: calc(50% - 2rem);
-    padding: 2.4rem;
+    /* max-width: calc(50% - 2rem); */
+    /* padding: 2.4rem; */
   }
 }
 
 /* --- Breakpoint: 480px (Mobile) --- */
+@media (max-width: 600px) {
+  .service {
+    /* padding: 6rem 2rem; */
+  }
 
+  .service__cards {
+    flex-direction: column; /* Allows cards to drop to next line */
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .service-card {
+    width: 100%;
+    padding: 1.4rem;
+  }
+}
+@media (max-width: 460px) {
+  .service__subtitle br {
+    display: none;
+  }
+}
 /* ───────────────────────────────────────────────
    Feature Section    
 ───────────────────────────────────────────────── */
@@ -733,6 +788,7 @@ header {
 .feature__card-content {
   display: flex;
   justify-content: space-between;
+  gap: 2.4rem;
 }
 
 .feature__content-progressbar {
@@ -831,8 +887,10 @@ header {
 .feature__card-grid {
   display: grid;
   grid-template-columns: repeat(2, 24.2rem);
-  align-content: start;
+  align-content: center;
   gap: 1.6rem 2rem;
+  align-items: center;
+  justify-content: center;
 }
 .contact-item {
   align-self: center;
@@ -906,6 +964,9 @@ header {
 }
 
 @media (max-width: 860px) {
+  .features {
+    padding: 0 2rem;
+  }
   .feature__content-heading {
     font-size: 2.4rem;
   }
@@ -942,13 +1003,6 @@ header {
   }
 }
 
-@media (max-width: 1100px) {
-  .feature__card-grid {
-    align-content: center;
-    /* grid-template-columns: repeat(2, 20.2rem); */
-  }
-}
-
 @media (max-width: 1024px) {
   .feature__card-grid {
     display: grid;
@@ -977,7 +1031,13 @@ header {
   .feature__card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* .contact-item {
+}
+@media (max-width: 480px) {
+  .feature__card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* .contact-item {
     align-self: center;
     position: relative;
     display: flex;
@@ -993,23 +1053,58 @@ header {
 
     border-radius: 2rem;
   } */
-}
+
 /* ───────────────────────────────────────────────
    Pricing Section
 ───────────────────────────────────────────────── */
 .pricing {
+  margin-top: 10rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("../assets/images/grind-2.png ");
+  position: relative; /* Keep this! It anchors the globe */
+  background: url("../assets/images/grind-2.png");
 }
+
+.pricing-planet--sky,
+.pricing-planet--organ-small {
+  position: absolute;
+}
+
+.pricing-planet--sky {
+  top: 6%;
+  right: 15%;
+}
+.pricing-planet--organ-small {
+  top: 0;
+  right: 25%;
+}
+/* Removed the space between .pricing and ::after */
+.pricing::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: url("../assets/images/globe--small.svg") center / contain
+    no-repeat;
+
+  /* Example: Position it in the bottom right corner */
+  top: -10%;
+  right: 20px;
+
+  /* Optional: Ensure it doesn't cover your text/buttons */
+  z-index: 1;
+  pointer-events: none;
+}
+
 .pricing__container {
   display: flex;
   align-items: stretch;
   gap: 2.4rem;
   padding: 3.2rem;
+  /* background-color: wheat; */
 }
 
 /* Card Styles */
@@ -1109,7 +1204,7 @@ header {
 
 .pricing-card__feature {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   padding: 2rem 0;
 
@@ -1127,19 +1222,89 @@ header {
 /* Custom Checkmark Icon */
 .pricing-card__feature::before {
   content: "";
-  display: inline-block;
+  display: block;
   width: 2.4rem;
   height: 2.4rem;
   margin-right: 1.5rem;
-
   background: url("../assets/icons/price-check.svg");
+  background-size: contain;
 }
+
+/* --- Media Queries --- */
 
 @media (max-width: 1100px) {
+  .pricing__container {
+    /* Allow cards to wrap if they run out of space */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* gap: 3.2rem; */
+  }
+
+  .pricing-card {
+    /* Set width to nearly half to create a 2x1 grid on mid-size screens */
+    /* flex: 1 1 calc(50% - 3.2rem); */
+    /* max-width: 45rem; */
+  }
+
+  .pricing-card--featured {
+    /* Removing scale prevents overlapping on tablet layouts */
+    transform: scale(1);
+    order: -1; /* Optionally brings the featured card to the top */
+  }
 }
-@media (max-width: 800px) {
+
+@media (max-width: 860px) {
+  .pricing__container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 100%; /* Cards take full width of container */
+  }
+
+  .pricing-card--featured {
+    transform: scale(1);
+  }
+
+  .pricing-card__price {
+    /* Slightly smaller font for mobile readability */
+    font-size: 6rem;
+  }
 }
+
 @media (max-width: 480px) {
+  .pricing {
+    padding: 2rem 0;
+  }
+  .pricing__container {
+    padding: 1.6rem;
+    gap: 2rem;
+  }
+
+  .pricing-card {
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+  }
+
+  .pricing-card__title {
+    font-size: 2.4rem;
+  }
+
+  .pricing-card__price {
+    font-size: 4.8rem;
+  }
+
+  .pricing-card__currency {
+    font-size: 2.4rem;
+  }
+
+  .pricing-card__feature {
+    font-size: 1.6rem;
+    padding: 1.5rem 0;
+  }
 }
 
 /* ───────────────────────────────────────────────
@@ -1165,6 +1330,7 @@ header {
 }
 
 .testimonials-wrapper {
+  width: 100%;
   max-width: 132rem;
   margin: 0 auto;
   position: relative;
@@ -1181,6 +1347,7 @@ header {
 }
 
 .outer-container {
+  width: 100%;
   max-width: 132rem;
   padding: clamp(2rem, 4vw, 4rem);
   background: linear-gradient(
@@ -1217,6 +1384,7 @@ header {
     rgba(51, 51, 62, 0.16) 6.21%,
     rgba(83, 84, 108, 0.16) 98.02%
   );
+  padding: 24px 24px 80px 24px;
 }
 
 .inner-container::before {
@@ -1382,6 +1550,8 @@ header {
 }
 
 .dots {
+  position: absolute;
+
   display: flex;
   gap: 1.6rem;
   justify-content: center;
@@ -1389,8 +1559,12 @@ header {
   height: 2.4rem;
   margin-top: 3.2rem;
 }
+#dotsContainer {
+  bottom: 10% !important;
+}
 
 .dot {
+  z-index: 10;
   width: 2.4rem;
   height: 2.4rem;
   border: none;
@@ -1416,8 +1590,13 @@ header {
 .dot.active::before {
   content: "";
   position: absolute;
-  inset: 0;
+  width: 2rem;
+  height: 2rem;
+  left: -65%;
+  bottom: -78%;
+  /* inset: -2%; */
   border-radius: 50%;
+  /* border: 1.5px solid transparent; */
   padding: 1px;
   background: linear-gradient(87.95deg, #090edb -15.78%, #e73dc4 102.06%);
   -webkit-mask:
@@ -1468,6 +1647,11 @@ header {
   padding: 14.9rem;
   background: url("../assets/images/grind-2.png") center/cover no-repeat;
   /* min-height: 63rem; */
+  --orbit-1: clamp(12rem, 28vw, 22rem);
+  --orbit-2: clamp(24rem, 42vw, 34.4rem);
+  --orbit-3: clamp(38rem, 60vw, 49rem);
+  --orbit-4: clamp(52rem, 76vw, 62.8rem);
+  --orbit-5: clamp(64rem, 90vw, 74.4rem);
 }
 .cta-container {
   height: 100%;
@@ -1491,7 +1675,7 @@ header {
 .cta-content__heading {
   font-family: var(--font-sora);
   font-weight: 600;
-  font-size: 6rem;
+  font-size: clamp(3.2rem, 8vw, 6rem);
   line-height: 1.2;
   color: #ffffff;
   margin: 0;
@@ -1523,7 +1707,7 @@ header {
 
 /* Button Component */
 .cta-content__button {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1561,6 +1745,31 @@ header {
 
 .cta-content__button:hover {
   opacity: 0.9;
+}
+
+@media (max-width: 860px) {
+  .cta-content__stroke {
+    width: 100%;
+    height: auto;
+  }
+  .cta-content__subheading {
+    height: auto;
+
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 480px) {
+  .cta-content__stroke {
+    width: 100%;
+    height: auto;
+  }
+  .cta-content__subheading {
+    height: auto;
+
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
 }
 
 /* ───────────────────────────────────────────────
@@ -1641,6 +1850,40 @@ header {
   object-fit: contain;
 }
 
+@media (max-width: 980px) {
+  .footer__nav {
+    width: 100%;
+    height: auto;
+  }
+  .footer__nav-list {
+    align-content: center;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+  .footer__nav-item {
+    padding: 0;
+  }
+}
+@media (max-width: 620px) {
+  .footer__nav-list {
+    justify-content: flex-start;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__logo {
+    width: 100%;
+    height: auto;
+  }
+  .footer__bottom {
+    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
 /* swiper js  */
 
 /* Ensure your custom buttons are visible over the swiper */

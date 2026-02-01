@@ -80,6 +80,23 @@
     <section class="hero">
       <div class="container">
         <div class="hero__overlay space-container">
+          <!-- planet -->
+          <div class="planet--green">
+            <img src="/assets/images/planet--green.svg" alt="" />
+          </div>
+          <div class="planet--organ-small">
+            <img src="/assets/images/planet--organ-small.svg" alt="" />
+          </div>
+          <div class="planet--sky">
+            <img src="/assets/images/planet--sky.svg" alt="" />
+          </div>
+          <div class="planet--organ-big">
+            <img src="/assets/images/planet--organ-big.svg" alt="" />
+          </div>
+          <div class="planet--green-2">
+            <img src="/assets/images/planet--green.svg" alt="" />
+          </div>
+          <!-- orbit -->
           <div class="orbit orbit--1"></div>
           <div class="orbit orbit--2"></div>
           <div class="orbit orbit--3"></div>
@@ -102,7 +119,7 @@
                 <button class="premium-btn gap-4 w-155 w-full">
                   Start free trial
                 </button>
-                <button class="cta-content__button">Use it now</button>
+                <button class="cta-content__button w-full">Use it now</button>
               </div>
             </div>
 
@@ -541,6 +558,13 @@
 
     <!-- Comment: pricing  -->
     <section class="pricing">
+      <div class="pricing-planet--organ-small">
+        <img src="/assets/images/planet--organ-small.svg" alt="" />
+      </div>
+      <div class="pricing-planet--sky">
+        <img src="/assets/images/planet--sky.svg" alt="" />
+      </div>
+
       <div class="container margin-auto">
         <div class="testimonials-content">
           <div class="service-pill">Price</div>
@@ -609,7 +633,7 @@
       </div>
     </section>
 
-    <!-- Comment: testimonial
+    <!-- Comment: testimonial -->
     <section class="testimonials">
       <div class="testimonials-content">
         <div class="service-pill">Testimonial</div>
@@ -624,7 +648,7 @@
           <div class="inner-container">
             <div class="swiper" id="testimonialsSwiper">
               <div class="swiper-wrapper">
-                Comment: Slide 1
+                <!-- Comment: Slide 1 -->
                 <div class="swiper-slide">
                   <div class="card-content">
                     <div class="testimonial">
@@ -657,7 +681,7 @@
                   </div>
                 </div>
 
-                Comment: Slide 2
+                <!-- Comment: Slide 2 -->
                 <div class="swiper-slide">
                   <div class="card-content">
                     <div class="testimonial">
@@ -690,7 +714,7 @@
                   </div>
                 </div>
 
-                Comment: Slide 3
+                <!-- Comment: Slide 3 -->
                 <div class="swiper-slide">
                   <div class="card-content">
                     <div class="testimonial">
@@ -723,7 +747,7 @@
                   </div>
                 </div>
 
-                Comment: Slide 4
+                <!-- Comment: Slide 4 -->
                 <div class="swiper-slide">
                   <div class="card-content">
                     <div class="testimonial">
@@ -759,7 +783,7 @@
             </div>
           </div>
 
-          Commnet: Dots
+          <!-- Commnet: Dots -->
           <div class="dots" id="dotsContainer">
             <button class="dot"></button>
             <button class="dot active"></button>
@@ -767,7 +791,7 @@
             <button class="dot"></button>
           </div>
 
-          Comment: Navigation Buttons
+          <!-- Comment: Navigation Buttons -->
           <div class="nav-btn-position btn-left">
             <button class="nav-btn btn-prev" aria-label="Previous">
               <svg viewBox="0 0 24 24">
@@ -785,15 +809,14 @@
         </div>
       </div>
     </section>
-   -->
 
-    <!-- <section class="cta">
+    <section class="cta">
       <div class="space-container" style="--gradient-size: 50vmax">
-        <div class="orbit" style="--size: 220px"></div>
-        <div class="orbit" style="--size: 344px"></div>
-        <div class="orbit" style="--size: 490px"></div>
-        <div class="orbit" style="--size: 628px"></div>
-        <div class="orbit" style="--size: 744px"></div>
+        <div class="orbit orbit--1"></div>
+        <div class="orbit orbit--2"></div>
+        <div class="orbit orbit--3"></div>
+        <div class="orbit orbit--4"></div>
+        <div class="orbit orbit--5"></div>
         <div class="container">
           <div class="cta-container">
             <div class="cta-content">
@@ -816,11 +839,11 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer__container">
-        Comment: Top section 
+        <!-- Comment: Top section -->
         <div class="footer__top">
           <a href="/" class="footer__logo">
             <img src="./assets/images/logo.svg" alt="IdentityHub" />
@@ -844,7 +867,7 @@
           </nav>
         </div>
 
-        Comment: Bottom section
+        <!-- Comment: Bottom section -->
         <div class="footer__bottom">
           <p class="footer__copyright">
             © IdentityHub 2024. All rights reserved.
@@ -869,14 +892,14 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper("#testimonialsSwiper", {
         loop: true,
         autoplay: {
-          delay: 10000, // 10 seconds
+          delay: 1000000, // 10 seconds
           disableOnInteraction: false,
         },
         pagination: {
